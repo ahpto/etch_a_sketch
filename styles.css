@@ -1,0 +1,16 @@
+
+
+#container {
+    display: grid;
+    width: 100%;
+}
+
+.makeGrid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.etchers {
+    border: 1px solid black;
+    height: 1em;
+    width: 1em;
+}
