@@ -11,13 +11,18 @@ header {
     padding: 10px;
     text-align: center;
     font-size: 22px;
+    display: flex;
+    flex-direction: column;
 }
 
-form {
+label {
     margin-top: 10px;
     font-size: 16px;
 }
 
+#number {
+    width: 3em;
+}
 
 #container {
    
