@@ -1,12 +1,19 @@
 
 container = document.querySelector("#container");
+numSquare = document.querySelector('#squares');
 
 divLayout = () => {
     
-    function1 = () => {
+    makeDivs = () => {
+
+        document.querySelectorAll('.etchers').forEach(e => e.remove());
+        
         number1 = parseInt(document.querySelector('#number').value);
-        console.log(number1);
+        
+        numSquare.textContent = `${number1} Square Screen`;
+
         container.style["grid-template-columns"] = `repeat(${number1}, .5em)`;
+        
         for (i=1; i<=(number1*number1); i++) {
         
             createDiv = () => {
@@ -20,8 +27,7 @@ divLayout = () => {
         }       
     }
     button = document.querySelector("#button");
-    button.addEventListener('click', function1);
-       
+    button.addEventListener('click', makeDivs);       
 }
 
 divLayout();
