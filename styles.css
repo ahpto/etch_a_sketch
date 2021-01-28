@@ -33,7 +33,8 @@ label {
    
     margin-left: auto;
     margin-right: auto;
-    width: max-content;
+    width: 960px;
+    height: 960px;
     display: grid;
     margin-top: 40px; 
     border-top: .5px solid var(--borderColor);
@@ -43,4 +44,9 @@ label {
 .etchers {
     border-bottom: .5px solid var(--borderColor);
     border-right: .5px solid var(--borderColor);
+}
+
+.etchersHover {
+
+    background-color: rgba(0, 0, 0, 0.5);    
 }
