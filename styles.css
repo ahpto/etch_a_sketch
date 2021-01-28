@@ -45,8 +45,3 @@ label {
     border-bottom: .5px solid var(--borderColor);
     border-right: .5px solid var(--borderColor);
 }
-
-.etchersHover {
-
-    background-color: rgba(0, 0, 0, 0.5);    
-}

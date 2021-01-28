@@ -19,8 +19,10 @@ divLayout = () => {
             createDiv = () => {    
                 
                 div1 = document.createElement("div");
-                div1.classList.add("etchers");
-                div1.addEventListener("mouseover", function (e) {this.style.background = `rgba(0, 0, 0, ${})`} );
+                div1.className = "etchers";
+                div1.dataKey = "0";
+                div1.addEventListener("mouseover", function (e) {
+                    newInt = parseInt(this.dataKey); newInt += 1; this.dataKey = newInt; this.style.background = `rgba(0, 0, 0, ${this.dataKey*0.1} )`} );
                 return div1;
             }
             container.appendChild(createDiv());
