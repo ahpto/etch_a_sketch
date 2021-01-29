@@ -40,6 +40,7 @@ label {
     border-top: .5px solid var(--borderColor); /*so that borders do not double up*/
     border-left: .5px solid var(--borderColor); /*so that borders do not double up*/
     background: white;
+    box-shadow: 0 0 50px 10px grey;
 }
 
 .etchers {
