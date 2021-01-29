@@ -31,20 +31,20 @@ label {
 }
 
 #container {
-   
     margin-left: auto;
     margin-right: auto;
     width: 960px;
     height: 960px;
     display: grid;
     margin-top: 40px; 
-    border-top: .5px solid var(--borderColor);
-    border-left: .5px solid var(--borderColor);
+    border-top: .5px solid var(--borderColor); /*so that borders do not double up*/
+    border-left: .5px solid var(--borderColor); /*so that borders do not double up*/
     background: white;
 }
+
 .etchers {
-    border-bottom: .5px solid var(--borderColor);
-    border-right: .5px solid var(--borderColor);
+    border-bottom: .5px solid var(--borderColor); /*so that borders do not double up*/
+    border-right: .5px solid var(--borderColor);  /*so that borders do not double up*/
 }
 
 #black {
