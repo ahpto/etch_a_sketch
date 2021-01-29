@@ -33,7 +33,10 @@ divLayout = () => {
                 div1.className = "etchers";
                 div1.dataKey = "0";
                 div1.addEventListener("mouseover", function (e) {
-                    newInt = parseInt(this.dataKey); newInt += 1; this.dataKey = newInt; this.style.backgroundColor = color; this.style.opacity = this.dataKey*0.1;})
+                    let newInt = parseInt(this.dataKey); newInt += 1; this.dataKey = newInt; 
+                    if (this.style.backgroundColor != color) {this.dataKey = 0; this.style.backgroundColor = color; this.style.opacity = this.dataKey*0.1;} else   
+                    {this.style.backgroundColor = color; this.style.opacity = this.dataKey*0.1;}
+                })
                 return div1;
             }
             container.appendChild(createDiv());
@@ -50,7 +53,7 @@ colorButton = () => {
 
     for (i = 0; i<colorChoice.length; i++) {
         colorChoice[i].addEventListener('click', function(e) {
-            color = e.target.id})
+            color = e.target.id;})
     }
 }
 
