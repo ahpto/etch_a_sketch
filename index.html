@@ -8,13 +8,24 @@
 </head>
 <body>
     <header>
-      Etch-A-Sketch
+      Etch-A-Sketch: the design of my website is simple because the real art is what you make!
       <form>  
-        <label for="number">Size of Screen (1-100 squares):</label>
+        <label for="number">Choose 1-100 squares across:</label>
         <input type="range" min="1" max="100" maxlength="3" id="number">
         <button id="button" type="button">generate</button>
       </form>
-      <div id="squares"></div>
+      <div id="squares">0x0 Squares</div>
+      <form>  
+        <label for="color">Choose colour:</label>
+        <button class="colors" id="black" type="button">black</button>
+        <button class="colors" id="yellow" type="button">yellow</button>
+        <button class="colors" id="orange" type="button">orange</button>
+        <button class="colors" id="red" type="button">red</button>
+        <button class="colors" id="blue" type="button">blue</button>
+        <button class="colors" id="green" type="button">green</button>
+        <button class="colors" id="aqua" type="button">aqua</button>
+        <button class="colors" id="purple" type="button">purple</button>
+      </form>
     </header>
     
     <div id="container">

@@ -1,6 +1,19 @@
 
 container = document.querySelector("#container");
 numSquare = document.querySelector('#squares');
+colorChoice = document.querySelectorAll('.colors');
+document.addEventListener('input', function (e) {number = e.target.value; numSquare.textContent = `${number}x${number} Squares`});
+let color;
+
+colorButton = () => {
+
+    for (i = 0; i<colorChoice.length; i++) {
+        colorChoice[i].addEventListener('click', function(e) {
+            color = e.target.id})
+    }
+}
+
+colorButton();
 
 divLayout = () => {
 
@@ -9,8 +22,6 @@ divLayout = () => {
         document.querySelectorAll('.etchers').forEach(el => el.remove());
         
         number1 = parseInt(document.querySelector('#number').value);
-        
-        numSquare.textContent = `${number1} Square Screen`;
 
         container.style["grid-template-columns"] = `repeat(${number1}, 1fr)`;
         
@@ -22,7 +33,7 @@ divLayout = () => {
                 div1.className = "etchers";
                 div1.dataKey = "0";
                 div1.addEventListener("mouseover", function (e) {
-                    newInt = parseInt(this.dataKey); newInt += 1; this.dataKey = newInt; this.style.background = `rgba(0, 0, 0, ${this.dataKey*0.1} )`} );
+                    newInt = parseInt(this.dataKey); newInt += 1; this.dataKey = newInt; this.style.backgroundColor = color; this.style.opacity = this.dataKey*0.1;})
                 return div1;
             }
             container.appendChild(createDiv());
@@ -32,7 +43,15 @@ divLayout = () => {
     button.addEventListener('click', makeDivs);
 }    
 
+        
 divLayout();
 
+colorButton = () => {
 
+    for (i = 0; i<colorChoice.length; i++) {
+        colorChoice[i].addEventListener('click', function(e) {
+            color = e.target.id})
+    }
+}
 
+colorButton();

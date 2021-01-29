@@ -22,6 +22,7 @@ label {
 
 #squares {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 #number {
@@ -44,4 +45,40 @@ label {
 .etchers {
     border-bottom: .5px solid var(--borderColor);
     border-right: .5px solid var(--borderColor);
+}
+
+#black {
+    color: white;
+    background-color: black;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#red {
+    color: white;
+    background-color: red;
+}
+#blue {
+    color: white;
+    background-color: blue;
+}
+
+#green {
+    color: white;
+    background-color: green;
+}
+
+#aqua {
+    background-color: aqua;
+}
+
+#purple {
+    color: white;
+    background-color: purple;
 }
