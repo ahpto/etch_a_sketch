@@ -1,37 +1,44 @@
 //declaring globlal variables:
 
-container = document.querySelector("#container");
-numSquare = document.querySelector('#squares');
-colorChoice = document.querySelectorAll('.colors');
+const container = document.querySelector("#container");
+const numSquare = document.querySelector('#squares');
+const colorChoice = document.querySelectorAll('.colors');
 let color;
 
 //to display live counter of grid size, shout out to TarekVisch:
-document.addEventListener('input', function (e) {
-    
+document.addEventListener('input', e => {
     number = e.target.value; 
     numSquare.textContent = `${number}x${number} Squares`
-
 });
 
 //to update color selection:
-colorChoice.forEach(el => el.addEventListener('click', function(e) {
-    color = e.target.id
-}))
+const changeColor = () => {
+    for (i=0; i<colorChoice.length; i++) {
+        colorChoice[i].addEventListener('click', e => {color = e.target.id;})
+    }
+}
+changeColor(); 
 
 //main function to generate functional grid:
-makeDivs = () => {
+const makeDivs = () => {
 
-    document.querySelectorAll('.etchers').forEach(el => el.remove()); //removes existing grid
+    const removeDivs = () => { //removes existing grid
+        const divs = document.querySelectorAll('.etchers');
+        for (i=0; i < divs.length; i++) {
+            divs[i].remove();
+        }
+    }
+    removeDivs();
         
-    number1 = parseInt(document.querySelector('#number').value);
+    const number1 = parseInt(document.querySelector('#number').value);
 
     container.style["grid-template-columns"] = `repeat(${number1}, 1fr)`;
         
     for (i=1; i<=(number1*number1); i++) { //creates the total boxes
         
-        createDiv = () => {    
+        const createDiv = () => {    
                 
-            div1 = document.createElement("div");
+            const div1 = document.createElement("div");
             div1.className = "etchers";
             div1.dataKey = "0"; //for opacity value
 
@@ -56,5 +63,5 @@ makeDivs = () => {
 }
 
 //to generate new grid:
-button = document.querySelector("#button"); 
+const button = document.querySelector("#button"); 
 button.addEventListener('click', makeDivs);
